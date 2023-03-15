@@ -12,7 +12,7 @@ resource "aws_transfer_user" "sftp_user" {
   home_directory_type = "LOGICAL"
 
   home_directory_mappings {
-    entry  = "/"
+    entry  = "/example-user"
     target = aws_s3_bucket.transfer_bucket.arn
   }
 }
